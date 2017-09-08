@@ -3,3 +3,7 @@
 .gdb_history
 /build
 gdb.txt
+
+/.buckd/
+/buck-out/
+.buckconfig.local

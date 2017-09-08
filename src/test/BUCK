@@ -1,0 +1,15 @@
+cxx_binary(
+  name = 'test',
+  header_namespace = '',
+  headers = subdir_glob([
+    ('c', '**/*.hpp'),
+    ('c', '**/*.h'),
+  ]) ,
+  srcs = glob([
+    'c/**/*.cpp',
+  ]),
+  deps = [
+    '//:internal',
+    '//:seasocks',
+  ],
+)
