@@ -1,0 +1,6 @@
+{
+  "name": "seasocks",
+  "dependencies": {
+    "madler/zlib": "1.2.11"
+  }
+}

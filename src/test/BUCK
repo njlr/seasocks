@@ -1,3 +1,7 @@
+linux_compiler_flags = [
+  '-lpthread',
+]
+
 cxx_binary(
   name = 'test',
   header_namespace = '',
@@ -8,6 +12,10 @@ cxx_binary(
   srcs = glob([
     'c/**/*.cpp',
   ]),
+  platform_compiler_flags = [
+    ('default', linux_compiler_flags),
+    ('^linux.*', linux_compiler_flags),
+  ],
   deps = [
     '//:internal',
     '//:seasocks',
